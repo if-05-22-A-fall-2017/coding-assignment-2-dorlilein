@@ -1,0 +1,142 @@
+Last login: Thu Nov 16 09:04:58 on ttys000
+Doris-MacBook-Air:~ d_lehner$ ls
+24.mp4			Mathe-HÜ.xlsx		Public
+Desktop			Microsoft Excel		Raphi_GB.mp4
+Documents		Microsoft PowerPoint	Schatz
+Downloads		Microsoft Word		Schule
+H-plan.docx		Movies			Skype.app
+Library			Music			Üben
+Liste.docx		Pictures		lottery
+Doris-MacBook-Air:~ d_lehner$ gprolog
+GNU Prolog 1.4.4 (64 bits)
+Compiled Apr 23 2013, 17:26:17 with /opt/local/bin/gcc-apple-4.2
+By Daniel Diaz
+Copyright (C) 1999-2013 Daniel Diaz
+| ?- [user].                    
+compiling user for byte code...
+parent(adam,john).
+
+user compiled, 3 lines read - 211 bytes written, 102183 ms
+
+(1 ms) yes
+| ?- parent(adam,john).
+
+yes
+| ?- parent(adam,X).   
+
+X = john
+
+yes
+| ?- [user].
+compiling user for byte code...
+
+user compiled, 1 lines read - 46 bytes written, 11822 ms
+
+(1 ms) yes
+| ?- parent(andam,john).
+
+no
+| ?- parent(adam,john). 
+
+yes
+| ?- [user].
+compiling user for byte code...
+halt.
+
+
+
+user compiled, 4 lines read - 152 bytes written, 81358 ms
+error: user:1: native code procedure halt/0 cannot be redefined (ignored)
+
+(1 ms) yes
+| ?- halt.
+Doris-MacBook-Air:~ d_lehner$ gprolog
+GNU Prolog 1.4.4 (64 bits)
+Compiled Apr 23 2013, 17:26:17 with /opt/local/bin/gcc-apple-4.2
+By Daniel Diaz
+Copyright (C) 1999-2013 Daniel Diaz
+| ?- [user].           
+compiling user for byte code...
+parent(adam,john).
+parent(john,anne).
+
+user compiled, 3 lines read - 299 bytes written, 39302 ms
+
+(1 ms) yes
+| ?- parent(adam,X).
+
+X = john
+
+yes
+| ?- parent(john,X).
+
+X = anne
+
+(1 ms) yes
+| ?- [user].
+compiling user for byte code...
+parent(eve,john).
+parent(john,pat).
+parent(eve,lisa).
+parent(pat,jacob).
+parent(carol,jacob).
+
+user compiled, 6 lines read - 561 bytes written, 60534 ms
+
+(1 ms) yes
+| ?- parent(pat,X).
+
+X = jacob
+
+yes
+| ?- parent(lisa,X).
+
+no
+| ?- [user].
+compiling user for byte code...
+grandparent(adam,anne).
+           
+user compiled, 2 lines read - 221 bytes written, 674305 ms
+
+(1 ms) yes
+| ?- [user].
+compiling user for byte code...
+grandpa/2  
+grandpa/2.             
+user:2:1: syntax error: . or operator expected after expression
+GP(Grandparent).
+user:3:3: syntax error: . or operator expected after expression
+grandperant(GP,GC):- parent(GP,C) parent(C,GC).
+user:4:35: syntax error: . or operator expected after expression
+grandperant(GP,GC):- parent(GP,C) parent(C,GC) 
+
+user:5:35: syntax error: . or operator expected after expression
+	4 error(s)
+compilation failed
+
+(2 ms) no
+| ?- granparant(adam,X).
+uncaught exception: error(existence_error(procedure,granparant/2),top_level/0)
+| ?- [user].
+compiling user for byte code...
+grandparent(GP,GC):- parent(GP,C) , parent(C,GC)
+
+user:2:1: syntax error: . or operator expected after expression
+	1 error(s)
+compilation failed
+
+(1 ms) no
+| ?- [user].
+compiling user for byte code...
+grandparent(GP,GC):- parent(GP,C) , parent(C,GC).
+
+user compiled, 2 lines read - 376 bytes written, 13328 ms
+
+(1 ms) yes
+| ?- grandparent(GP,X).
+
+GP = eve
+X = pat ? 
+
+yes
+| ?- 
